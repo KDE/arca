@@ -6,6 +6,7 @@
 set(project_SRCS
     code/main.cpp
     code/compressedfile.cpp
+    code/temporaryfile.cpp
     assets/assets.qrc
     )
 

@@ -11,6 +11,8 @@
 
 #include "../project_version.h"
 
+#include "code/compressedfile.h"
+
 //Useful for setting quickly an app template
 #define ORG_NAME "Maui"
 #define PROJECT_NAME "Arca"
@@ -59,6 +61,11 @@ int main(int argc, char *argv[])
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
+
+
+    qmlRegisterType<CompressedFile>(PROJECT_URI, 1, 0, "CompressedFile");
+
+
     engine.load(url);
 
     return app.exec();
