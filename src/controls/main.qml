@@ -18,16 +18,9 @@ Maui.ApplicationWindow
     property alias dialog : _dialogLoader.item
 
 
-
-    Arca.CompressedFile
-    {
-        id: _manager
-    }
-
     Loader
     {
         id: _dialogLoader
-
     }
 
     Component
@@ -50,92 +43,18 @@ Maui.ApplicationWindow
         }
     }
 
-
-    Maui.AltBrowser
+    Maui.TabView
     {
-        id: _browser
+        id: _tabView
         anchors.fill: parent
-        model: Maui.BaseModel
-        {
-            list: _manager.model
-        }
-        title: _manager.model.fileName || root.title
-        showCSDControls: true
+        tabBar.visible: true
 
-
-        headBar.rightContent: [
-
-            Maui.ToolButtonMenu
-            {
-              icon.name:  "archive-extract"
-              enabled: _manager.model.opened
-
-                MenuItem
-                {
-                    text: i18n("Extract")
-                }
-
-                MenuItem
-                {
-                    text: i18n("Extract to...")
-                }
-            },
-
-            ToolButton
-            {
-                icon.name: "archive-insert"
-                enabled: _manager.model.opened
-            }
-        ]
-
-        headBar.leftContent: [
-            Maui.ToolButtonMenu
-                {
-                    icon.name: "application-menu"
-
-                    MenuItem
-                    {
-                        text: i18n("Open")
-                        icon.name: "folder-open"
-                        onTriggered: openFileDialog()
-
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("Settings")
-                        icon.name: "settings-configure"
-                        onTriggered: openSettingsDialog()
-                    }
-
-                    MenuItem
-                    {
-                        text: i18n("About")
-                        icon.name: "documentinfo"
-                        onTriggered: root.about()
-                    }
-                },
-
-            ToolButton
-            {
-                icon.name: "go-up"
-                onClicked: _manager.model.goUp()
-                enabled: _manager.model.canGoUp
-            },
-
-            ToolButton
-            {
-                icon.name: "folder-root"
-                onClicked: _manager.model.goToRoot()
-                enabled: _manager.model.opened
-            }
-
-        ]
-
-        holder.visible: _browser.count === 0
+tabBar.showNewTabButton: false
+        holder.visible: count === 0
         holder.emoji: "archive-insert"
         holder.title: i18n("Compress")
         holder.body: "Drop files in here to compress them."
+
 
         holder.actions: [
 
@@ -152,126 +71,80 @@ Maui.ApplicationWindow
 
         ]
 
-        Label
-        {
-            color: "pink"
-            text: _manager.model.currentPath
-        }
+        tabBar.rightContent: [
 
-        listDelegate: Maui.ListBrowserDelegate
-        {
-            width: ListView.view.width
-
-            label1.text: model.label
-            label2.text: model.path
-            label3.text: Maui.Handy.formatSize(model.size)
-            iconSource: model.icon
-
-            onClicked:
+        Maui.ToolButtonMenu
             {
-                if(Maui.Handy.singleClick)
+                icon.name: "list-add"
+
+                MenuItem
                 {
-                    _browser.currentIndex = index
-                    openItem(_browser.model.get(index))
+                    text: i18n("Open")
+                    onTriggered: openFileDialog()
                 }
 
-            }
-
-            onDoubleClicked:
-            {
-                if(!Maui.Handy.singleClick)
+                MenuItem
                 {
-                    _browser.currentIndex = index
-                    openItem(_browser.model.get(index))
+                    text: i18n("Create")
+                }
+            },
+
+             Maui.WindowControls {}
+
+        ]
+
+        tabBar.leftContent: Maui.ToolButtonMenu
+            {
+                icon.name: "application-menu"
+
+                MenuItem
+                {
+                    text: i18n("Open")
+                    icon.name: "folder-open"
+                    onTriggered: openFileDialog()
+
+                }
+
+                MenuItem
+                {
+                    text: i18n("Settings")
+                    icon.name: "settings-configure"
+                    onTriggered: openSettingsDialog()
+                }
+
+                MenuItem
+                {
+                    text: i18n("About")
+                    icon.name: "documentinfo"
+                    onTriggered: root.about()
                 }
             }
-
-            onRightClicked:
-            {
-                _browser.currentIndex = index
-                _menu.item = _browser.model.get(index)
-                _menu.show()
-            }
-
-
-        }
-
-        gridDelegate: Item
-        {
-            width: GridView.view.cellWidth
-            height: GridView.view.cellHeight
-
-            Maui.GridBrowserDelegate
-            {
-                anchors.fill: parent
-                anchors.margins: Maui.Style.space.medium
-                iconSource: model.icon
-            }
-        }
-
-        Maui.ContextualMenu
-        {
-            id: _menu
-
-            property var item
-
-            MenuItem
-            {
-                text: i18n("Preview")
-                icon.name: "quickopen"
-                onTriggered: root.previewFile(_menu.item.path)
-            }
-
-            MenuItem
-            {
-                text: i18n("Open")
-                icon.name: "document-open"
-            }
-
-            MenuItem
-            {
-                text: i18n("Open with")
-            }
-
-            MenuSeparator{}
-
-            MenuItem
-            {
-                text: i18n("Delete")
-                icon.name: "entry-delete"
-            }
-        }
-
-
     }
 
-
-    function openItem(item)
+    Component
     {
-        if(item.isdir === "true")
-        {
-            _manager.model.openDir(item.path)
+        id: _archivePageComponent
 
-        }else
+        ArchivePage
         {
-            previewFile(item.path)
+
+            Maui.TabViewInfo.tabTitle: title
+            Maui.TabViewInfo.tabToolTipText:  url
+            height: ListView.view.height
+                width: ListView.view.width
         }
-
-
     }
 
-    function previewFile(path)
+    function openArchive(url)
     {
-        var url = _manager.model.temporaryFile(path)
+        _tabView.addTab(_archivePageComponent, {'url': url})
+    }
+
+    function previewFile(url)
+    {
         _dialogLoader.sourceComponent = _previewComponent
         dialog.currentUrl = url
         dialog.open()
-
-    }
-
-    function openFile(url)
-    {
-        _manager.url = url
     }
 
     function openFileDialog()
@@ -283,7 +156,7 @@ Maui.ApplicationWindow
 
             for(var path of paths)
             {
-                openFile(path)
+                openArchive(path)
             }
         }
 
