@@ -31,6 +31,7 @@ public:
 
     bool opened() const;
 
+    void refresh();
     const KArchiveFile *getFile(const QString &path);
 
 public slots:
@@ -41,6 +42,12 @@ public slots:
     void open();
 
     QString temporaryFile(const QString &path);
+
+    bool addFiles(const QStringList &urls, const QString &path);
+    bool addFile(const QString &url, const QString &path);
+
+    bool extractFiles(const QStringList &urls, const QString &where);
+    bool extractFile(const QString &url, const QString &where);
 
     void setCurrentPath(QString currentPath);
 

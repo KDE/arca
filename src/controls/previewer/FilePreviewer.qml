@@ -51,6 +51,7 @@ Maui.Dialog
         {
             id: previewLoader
             asynchronous: true
+            active: control.visible
             source: show()
         }
 

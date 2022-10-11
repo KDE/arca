@@ -14,14 +14,36 @@ Maui.Page
     id: control
     title: _manager.model.fileName || root.title
     property alias url : _manager.url
-showTitle: false
+    showTitle: false
 
     Arca.CompressedFile
     {
         id: _manager
     }
 
-    headBar.rightContent: [
+    headBar.middleContent: Maui.SearchField
+    {
+        Layout.maximumWidth: 500
+        Layout.fillWidth: true
+        Layout.alignment: Qt.AlignCenter
+        enabled: _manager.model.count > 1
+
+        placeholderText: i18np("Search", "Search %1 files", _manager.model.count );
+        onAccepted:
+        {
+            if(text.includes(","))
+            {
+                _archiveModel.filters = text.split(",")
+            }else
+            {
+                _archiveModel.filter = text
+            }
+        }
+
+        onCleared: _archiveModel.clearFilters()
+    }
+
+    headBar.leftContent: [
 
         Maui.ToolButtonMenu
         {
@@ -43,10 +65,11 @@ showTitle: false
         {
             icon.name: "archive-insert"
             enabled: _manager.model.opened
+            onClicked: control.insertFiles()
         }
     ]
 
-    headBar.leftContent: [
+    headBar.rightContent: [
 
         ToolButton
         {
@@ -60,6 +83,36 @@ showTitle: false
             icon.name: "folder-root"
             onClicked: _manager.model.goToRoot()
             enabled: _manager.model.opened
+        },
+
+        Maui.ToolButtonMenu
+        {
+            icon.name: "view-sort"
+
+            MenuItem
+            {
+                autoExclusive: true
+                text: i18n("Name")
+                checked : _archiveModel.sort === "label"
+                onTriggered: _archiveModel.sort = "label"
+            }
+
+            MenuItem
+            {
+                autoExclusive: true
+                text: i18n("Date")
+                checked : _archiveModel.sort === "date"
+                onTriggered: _archiveModel.sort = "date"
+            }
+
+            MenuItem
+            {
+                autoExclusive: true
+                text: i18n("Size")
+                checked : _archiveModel.sort === "size"
+                onTriggered: _archiveModel.sort = "size"
+            }
+
         }
 
     ]
@@ -70,6 +123,12 @@ showTitle: false
         anchors.fill: parent
         model: Maui.BaseModel
         {
+            id: _archiveModel
+            sort: "label"
+            sortOrder: Qt.AscendingOrder
+            recursiveFilteringEnabled: true
+            sortCaseSensitivity: Qt.CaseInsensitive
+            filterCaseSensitivity: Qt.CaseInsensitive
             list: _manager.model
         }
 
@@ -86,8 +145,9 @@ showTitle: false
             width: ListView.view.width
 
             label1.text: model.label
-            label2.text: model.path
-            label3.text: Maui.Handy.formatSize(model.size)
+            //            label2.text: model.path
+            label2.text: Qt.formatDateTime(new Date(model.date), "d MMM yyyy")
+            //            label4.text: Maui.Handy.formatSize(model.size)
             iconSource: model.icon
 
             onClicked:
@@ -166,6 +226,20 @@ showTitle: false
             var url = _manager.model.temporaryFile(item.path)
             previewFile(url)
         }
+    }
+
+    function insertFiles()
+    {
+        _dialogLoader.sourceComponent = _fileDialogComponent
+        dialog.mode = dialog.modes.OPEN
+        dialog.settings.filterType= FM.FMList.NONE
+        dialog.callback = (paths) => {
+
+            _manager.model.addFiles(paths, _manager.model.currentPath);
+
+        }
+
+        dialog.open()
     }
 
 }
