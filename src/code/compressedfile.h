@@ -44,10 +44,8 @@ public slots:
     QString temporaryFile(const QString &path);
 
     bool addFiles(const QStringList &urls, const QString &path);
-    bool addFile(const QString &url, const QString &path);
 
     bool extractFiles(const QStringList &urls, const QString &where);
-    bool extractFile(const QString &url, const QString &where);
 
     void setCurrentPath(QString currentPath);
 
@@ -70,6 +68,10 @@ private:
     QString m_fileName;
     bool m_canGoUp = false;
     bool m_opened;
+
+    bool addFile(const QString &url, const QString &path);
+    bool extractFile(const QString &url, const QString &where);
+
 };
 
 class CompressedFile : public QObject

@@ -187,6 +187,11 @@ QString CompressedFileModel::temporaryFile(const QString &path)
 
 bool CompressedFileModel::addFiles(const QStringList &urls, const QString &path)
 {
+                                    if(urls.isEmpty() || path.isEmpty())
+                    {
+                                    return false;
+                }
+
     bool success = false;
 
 

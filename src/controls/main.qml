@@ -43,13 +43,48 @@ Maui.ApplicationWindow
         }
     }
 
+    Maui.Dialog
+    {
+        id: _newArchiveDialog
+        persistent: false
+
+        acceptButton.text: i18n("Create")
+
+        TextField
+        {
+            Layout.fillWidth: true
+            placeholderText: i18n("Archive name...")
+        }
+
+        Maui.ListBrowserDelegate
+        {
+            Layout.fillWidth: true
+            label1.text: "ZIP"
+            iconSource: "application-zip"
+        }
+
+        Maui.ListBrowserDelegate
+        {
+            Layout.fillWidth: true
+            label1.text: "TAR"
+            iconSource: "application-x-tar"
+        }
+
+        Maui.ListBrowserDelegate
+        {
+            Layout.fillWidth: true
+            label1.text: "RAR"
+            iconSource: "application-x-rar"
+        }
+    }
+
     Maui.TabView
     {
         id: _tabView
         anchors.fill: parent
         tabBar.visible: true
 
-tabBar.showNewTabButton: false
+        tabBar.showNewTabButton: false
         holder.visible: count === 0
         holder.emoji: "archive-insert"
         holder.title: i18n("Compress")
@@ -60,57 +95,39 @@ tabBar.showNewTabButton: false
 
             Action
             {
+                id: _openArchiveAction
+                icon.name: "folder-open"
                 text: i18n("Open archive")
                 onTriggered: root.openFileDialog()
             },
 
             Action
             {
+                id: _createArchiveAction
                 text: i18n("Compress files")
+                icon.name: "archive-insert"
+                onTriggered: _newArchiveDialog.open()
             }
 
         ]
 
         tabBar.rightContent: [
 
-        Maui.ToolButtonMenu
+            Maui.ToolButtonMenu
             {
                 icon.name: "list-add"
 
                 MenuItem
                 {
-                    text: i18n("Open")
-                    onTriggered: openFileDialog()
+                    action: _openArchiveAction
                 }
 
                 MenuItem
                 {
-                    text: i18n("Create")
-                }
-            },
-
-             Maui.WindowControls {}
-
-        ]
-
-        tabBar.leftContent: Maui.ToolButtonMenu
-            {
-                icon.name: "application-menu"
-
-                MenuItem
-                {
-                    text: i18n("Open")
-                    icon.name: "folder-open"
-                    onTriggered: openFileDialog()
-
+                    action:_createArchiveAction
                 }
 
-                MenuItem
-                {
-                    text: i18n("Settings")
-                    icon.name: "settings-configure"
-                    onTriggered: openSettingsDialog()
-                }
+                MenuSeparator{}
 
                 MenuItem
                 {
@@ -118,7 +135,11 @@ tabBar.showNewTabButton: false
                     icon.name: "documentinfo"
                     onTriggered: root.about()
                 }
-            }
+            },
+
+            Maui.WindowControls {}
+
+        ]
     }
 
     Component
@@ -131,7 +152,7 @@ tabBar.showNewTabButton: false
             Maui.TabViewInfo.tabTitle: title
             Maui.TabViewInfo.tabToolTipText:  url
             height: ListView.view.height
-                width: ListView.view.width
+            width: ListView.view.width
         }
     }
 

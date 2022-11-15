@@ -21,6 +21,8 @@ Maui.Page
         id: _manager
     }
 
+
+
     headBar.middleContent: Maui.SearchField
     {
         Layout.maximumWidth: 500
@@ -213,6 +215,47 @@ Maui.Page
             }
         }
 
+    }
+
+
+    Item
+    {
+        visible: _dropArea.containsDrag
+        anchors.fill: parent
+
+        Rectangle
+        {
+            anchors.fill: parent
+            color: Maui.Theme.backgroundColor
+            opacity: 0.8
+        }
+
+        Maui.Holder
+        {
+            anchors.fill: parent
+            visible: true
+            title: i18n("Add here")
+            body: i18n("Drop file in here to add them to the archive")
+            emoji: "archive-insert"
+        }
+    }
+
+    DropArea
+    {
+        id: _dropArea
+        anchors.fill: parent
+
+        onDropped:
+        {
+            if(drop.hasUrls)
+
+            {
+                var urls = drop.urls.join(",").split(",")
+                console.log("DROP URLS", urls )
+                _manager.model.addFiles(urls, _manager.model.currentPath);
+            }
+
+        }
     }
 
     function openItem(item)

@@ -3,6 +3,7 @@
 #include <QCommandLineParser>
 #include <QDate>
 #include <QIcon>
+#include <QQmlContext>
 
 #include <MauiKit/Core/mauiapp.h>
 
@@ -32,7 +33,6 @@ int main(int argc, char *argv[])
     app.setOrganizationName(QStringLiteral(ORG_NAME));
     app.setWindowIcon(QIcon(":/logo.png"));
 
-    MauiApp::instance()->setIconName("qrc:/logo.svg");
 
     KLocalizedString::setApplicationDomain(COMPONENT_NAME);
 
@@ -48,6 +48,7 @@ int main(int argc, char *argv[])
     about.setProgramLogo(app.windowIcon());
 
     KAboutData::setApplicationData(about);
+    MauiApp::instance()->setIconName("qrc:/logo.svg");
 
     QCommandLineParser parser;
     parser.setApplicationDescription(about.shortDescription());
@@ -55,6 +56,8 @@ int main(int argc, char *argv[])
     about.processCommandLine(&parser);
 
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
@@ -63,8 +66,9 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
 
 
-    qmlRegisterType<CompressedFile>(PROJECT_URI, 1, 0, "CompressedFile");
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
+    qmlRegisterType<CompressedFile>(PROJECT_URI, 1, 0, "CompressedFile");
 
     engine.load(url);
 
