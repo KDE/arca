@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(arca VERSION 0.0.5)
+project(arca VERSION 0.1.0)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 

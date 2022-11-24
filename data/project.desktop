@@ -9,4 +9,3 @@ GenericName=Archiver
 StartupNotify=true
 Icon=arca
 Categories=Qt;KDE;Utility;Archiving;Compression;X-KDE-Utilities-File;
-MimeType=

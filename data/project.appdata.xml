@@ -1,175 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop">
-  <id>org.kde.vvave.desktop</id>
+  <id>org.kde.arca.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-3.0</project_license>
-  <name>Vvave</name>
-  <name xml:lang="ca">Vvave</name>
-  <name xml:lang="ca-valencia">Vvave</name>
-  <name xml:lang="cs">Vvave</name>
-  <name xml:lang="da">Vvave</name>
-  <name xml:lang="de">Vvave</name>
-  <name xml:lang="el">Vvave</name>
-  <name xml:lang="en-GB">Vvave</name>
-  <name xml:lang="es">Vvave</name>
-  <name xml:lang="et">Vvave</name>
-  <name xml:lang="eu">Vvave</name>
-  <name xml:lang="fi">Vvave</name>
-  <name xml:lang="fr">Vvave</name>
-  <name xml:lang="gl">Vvave</name>
-  <name xml:lang="hi">वैव (Vvave)</name>
-  <name xml:lang="hu">Vvave</name>
-  <name xml:lang="id">Vvave</name>
-  <name xml:lang="it">Vvave</name>
-  <name xml:lang="ka">Vvave</name>
-  <name xml:lang="ko">Vvave</name>
-  <name xml:lang="nl">Vvave</name>
-  <name xml:lang="nn">Vvave</name>
-  <name xml:lang="pa">ਵੇਵੇਵ</name>
-  <name xml:lang="pl">Vvave</name>
-  <name xml:lang="pt">Vvave</name>
-  <name xml:lang="pt-BR">Vvave</name>
-  <name xml:lang="ro">Vvave</name>
-  <name xml:lang="ru">Vvave</name>
-  <name xml:lang="sk">Vvave</name>
-  <name xml:lang="sl">Vvave</name>
-  <name xml:lang="sv">Vvave</name>
-  <name xml:lang="tr">Vvave</name>
-  <name xml:lang="uk">Vvave</name>
-  <name xml:lang="x-test">xxVvavexx</name>
-  <name xml:lang="zh-CN">Vvave</name>
-  <name xml:lang="zh-TW">Vvave</name>
-  <summary>Play your music collection</summary>
-  <summary xml:lang="ca">Reprodueix la vostra col·lecció de música</summary>
-  <summary xml:lang="ca-valencia">Reproduïx la vostra colecció de música</summary>
-  <summary xml:lang="cs">Přehrávejte svou hudební sbírku</summary>
-  <summary xml:lang="da">Afspil din musiksamling</summary>
-  <summary xml:lang="de">Wiedergabe Ihrer Musik-Sammlung</summary>
-  <summary xml:lang="el">Αναπαραγωγή της μουσικής συλλογής σας</summary>
-  <summary xml:lang="en-GB">Play your music collection</summary>
-  <summary xml:lang="es">Reproducir su colección de música</summary>
-  <summary xml:lang="et">Muusikakogu esitamine</summary>
-  <summary xml:lang="eu">Jo zure musika bilduma</summary>
-  <summary xml:lang="fi">Toista musiikkikokoelmaasi</summary>
-  <summary xml:lang="fr">Jouez votre collection musicale</summary>
-  <summary xml:lang="gl">Reproduza a súa colección de música</summary>
-  <summary xml:lang="hi">अपना संगीत संग्रह बजाएँ</summary>
-  <summary xml:lang="hu">Játssza le zenei gyűjteményét</summary>
-  <summary xml:lang="id">Putar koleksi musik Anda</summary>
-  <summary xml:lang="it">Riproduce la tua collezione musicale</summary>
-  <summary xml:lang="ka">მუსიკის თქვენი კოლექციის დაკვრა</summary>
-  <summary xml:lang="ko">내 음악 모음집 재생</summary>
-  <summary xml:lang="nl">Uw muziekcollectie afspelen</summary>
-  <summary xml:lang="nn">Spel av musikksamlinga di</summary>
-  <summary xml:lang="pa">ਆਪਣੇ ਸੰਗੀਤ ਭੰਡਾਰ ਨੂੰ ਸੁਣੋ</summary>
-  <summary xml:lang="pl">Odtwarza swój zbiór muzyki</summary>
-  <summary xml:lang="pt">Tocar a sua colecção de música</summary>
-  <summary xml:lang="pt-BR">Reproduza sua coleção de músicas</summary>
-  <summary xml:lang="ro">Redați-vă colecția muzicală</summary>
-  <summary xml:lang="sk">Prehrať vašu hudobnú kolekciu</summary>
-  <summary xml:lang="sl">Predvajajte svojo glasbeno zbirko</summary>
-  <summary xml:lang="sv">Spela din musiksamling</summary>
-  <summary xml:lang="tr">Müzik koleksiyonunuzu çalın</summary>
-  <summary xml:lang="uk">Відтворіть вашу музичну збірку</summary>
-  <summary xml:lang="x-test">xxPlay your music collectionxx</summary>
-  <summary xml:lang="zh-CN">播放您收藏的音乐</summary>
-  <summary xml:lang="zh-TW">播放您的音樂集合</summary>
+  <name>Arca</name>
+  <summary>Archive manager</summary>
   <description>
-    <p> Tiny Qt Music Player to keep your favorite songs at hand. </p>
-    <p xml:lang="ca">Reproductor musical en Qt per a tenir les cançons preferides a mà.</p>
-    <p xml:lang="ca-valencia">Reproductor musical en Qt per a tindre les cançons preferides a mà.</p>
-    <p xml:lang="cs">Maličký přehrávač ve Qt díky kterému budete mít svou oblíbenou hudbu vždy po ruce.</p>
-    <p xml:lang="da">Lille Qt-musikafspiller til at afspille dine favoritsange.</p>
-    <p xml:lang="de">Einfache Qt-Musikwiedergabe für Ihre Lieblingssongs.</p>
-    <p xml:lang="el">Μικροσκοπικό μουσικό κουτί σε Qt για να έχετε τα αγαπημένα σας τραγούδια έτοιμα όταν τα ζητάτε.</p>
-    <p xml:lang="en-GB">Tiny Qt Music Player to keep your favourite songs at hand.</p>
-    <p xml:lang="es">Pequeño reproductor de música en Qt para tener a mano sus canciones favoritas.</p>
-    <p xml:lang="et">Tilluke Qt muusikamängija hoiab lemmikpalad käeulatuses.</p>
-    <p xml:lang="eu">Qt musika jotzaile ñimiñoa zure gogoko abestiak eskura izateko.</p>
-    <p xml:lang="fi">Pikkuruinen Qt-musiikkisoitin suosikkikappaleittasi pitämiseksi lähellä.</p>
-    <p xml:lang="fr">Lecteur de musique Qt minimaliste pour conserver toutes vos chansons préférées à portée de main.</p>
-    <p xml:lang="gl">Pequeno reprodutor de música desenvolvido con Qt para ter a man as túas cancións favoritas.</p>
-    <p xml:lang="hi">छोटा क्यूट संगीत चालक जो आपके मनचाहे गीतों को उपलब्ध कराता है।</p>
-    <p xml:lang="hu">Qt-s zenelejátszó a kedvenc számaihoz.</p>
-    <p xml:lang="id">Pemutar Musik Qt yang kecil menjaga lagu favorit Anda tertangani.</p>
-    <p xml:lang="it">Piccolo lettore musicale basato su Qt per tenere le tue canzoni preferite a portata di mano.</p>
-    <p xml:lang="ka">ნამცეცა Qt-ზე დაწერილი მუსიკის დამკვრელი თქვენს სიმღერებთან პირდაპირი წვდომით.</p>
-    <p xml:lang="ko">좋아하는 음악을 간단하게 재생할 수 있는 작은 Qt 음악 재생기입니다.</p>
-    <p xml:lang="nl">Kleine Qt Music speler om uw favoriete songs bij de hand te houden.</p>
-    <p xml:lang="nn">Liten Qt-basert musikkspelar for lett tilgang til favorittmusikken din.</p>
-    <p xml:lang="pa">ਤੁਹਾਡੇ ਪਸੰਦੀਦਾ ਗਾਣੇ ਚਲਾਉਣ ਵਾਲਾ ਨਿੰਮਾ ਜਿਹਾ Qt ਸੰਗੀਤ ਪਲੇਅਰ ਹੈ।</p>
-    <p xml:lang="pl">Mały odtwarzacz muzyki Qt trzymający twoje ulubione piosenki w pobliżu.</p>
-    <p xml:lang="pt">Leitor de Música Minúsculo em Qt para manter as suas músicas favoritas à mão.</p>
-    <p xml:lang="pt-BR">Pequeno reprodutor de música para manter suas músicas favoritas a mão.</p>
-    <p xml:lang="ro">Mic program Qt de redare a muzicii pentru a vă păstra melodiile preferate la îndemână.</p>
-    <p xml:lang="sk">Malý Qt hudobný prehrávač na uchovanie vašich obľúbených skladieb poruke.</p>
-    <p xml:lang="sl">Majhen predvajalnik glasbe Qt, da imate pri roki svoje najljubše pesmi.</p>
-    <p xml:lang="sv">Mycket liten Qt musikspelare för att ha dina favoritlåtar till hands.</p>
-    <p xml:lang="tr">En sevdiğiniz şarkıları elinizin altında tutmak için küçük Qt Müzik Çalar.</p>
-    <p xml:lang="uk">Малесенький програвач музики на Qt, призначенням якого є зручний доступ до ваших улюблених композицій.</p>
-    <p xml:lang="x-test">xxTiny Qt Music Player to keep your favorite songs at hand.xx</p>
-    <p xml:lang="zh-CN">为您随身播放最喜爱音乐的简易 Qt 播放器。</p>
-    <p xml:lang="zh-TW">輕巧的 Qt 音樂播放器，讓你隨時隨地都能取得您喜愛的歌曲。</p>
+    <p>Browse, create and manage archives.</p>
   </description>
-  <url type="homepage">https://vvave.kde.org/</url>
-  <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=vvave</url>
+  <url type="homepage">https://mauikit.org/</url>
+  <url type="bugtracker">https://invent.kde.org/maui/arca/-/issues</url>
   <url type="donation">https://www.kde.org/community/donations</url>
   <screenshots>
     <screenshot type="default">
-      <caption>The Vvave music player</caption>
-      <caption xml:lang="ca">El reproductor de música Vvave</caption>
-      <caption xml:lang="ca-valencia">El reproductor de música Vvave</caption>
-      <caption xml:lang="cs">Přehrávač hudby Vvave</caption>
-      <caption xml:lang="da">Vvave-musikafspilleren</caption>
-      <caption xml:lang="de">Vvave-Musikwiedergabe</caption>
-      <caption xml:lang="el">Το πρόγραμμα αναπαραγωγής μουσικής Vvave</caption>
-      <caption xml:lang="en-GB">The Vvave music player</caption>
-      <caption xml:lang="es">El reproductor de música Vvave</caption>
-      <caption xml:lang="et">Vvave muusikamängija</caption>
-      <caption xml:lang="eu">Vvave musika jotzailea</caption>
-      <caption xml:lang="fi">Vvave-musiikkisoitin</caption>
-      <caption xml:lang="fr">Lecteur de musique Vvave</caption>
-      <caption xml:lang="gl">O reprodutor de música Vvave</caption>
-      <caption xml:lang="hi">वीवेव संगीत वादक</caption>
-      <caption xml:lang="hu">A Vvave zenelejátszó</caption>
-      <caption xml:lang="id">Pemutar musik Vvave</caption>
-      <caption xml:lang="it">Il lettore musicale Vvave</caption>
-      <caption xml:lang="ka">Vvave მუსიკალური დამკვრელი</caption>
-      <caption xml:lang="ko">Vvave 음악 재생기</caption>
-      <caption xml:lang="nl">De Vvave muziekspeler</caption>
-      <caption xml:lang="nn">Vvave musikkspelar</caption>
-      <caption xml:lang="pa">ਵੇਵੇਵ ਸੰਗੀਤ ਪਲੇਅਰ</caption>
-      <caption xml:lang="pl">Odtwarzacz muzyki Vvave</caption>
-      <caption xml:lang="pt">O leitor de música Vvave</caption>
-      <caption xml:lang="pt-BR">O reprodutor de músicas Vvave</caption>
-      <caption xml:lang="ro">Lectorul muzical Vvave</caption>
-      <caption xml:lang="sk">Prehrávač hudby Vvave</caption>
-      <caption xml:lang="sl">Predvajalnik glasbe Vvave</caption>
-      <caption xml:lang="sv">Vvave musikspelaren</caption>
-      <caption xml:lang="tr">Vvave müzik çalar</caption>
-      <caption xml:lang="uk">Музичний програвач Vvave</caption>
-      <caption xml:lang="x-test">xxThe Vvave music playerxx</caption>
-      <caption xml:lang="zh-CN">Vvave 音乐播放器</caption>
-      <caption xml:lang="zh-TW">Vvave 音樂播放器</caption>
-      <image type="source" width="1903" height="1320">
-        https://cdn.kde.org/screenshots/vvave/vvave.png
+      <caption>Arca - mobile version</caption>
+      <image type="source" width="2899" height="2326">
+        https://mauikit.org/wp-content/uploads/2022/11/arca.jpg
       </image>
     </screenshot>
   </screenshots>
   <provides>
-    <binary>vvave</binary>
+    <binary>arca</binary>
   </provides>
-  <content_rating type="oars-1.0"/>
   <recommends>
     <control>pointing</control>
     <control>keyboard</control>
     <control>touch</control>
   </recommends>
+  <content_rating type="oars-1.0"/>
   <project_group>KDE</project_group>
   <releases>
-    <release version="1.2.2" date="2021-05-11">
-      <url>https://nxos.org/maui/maui-1-2-2-release/</url>
+    <release version="0.1.0" date="2022-11-25">
+      <url>https://mauikit.org/blog/maui-2-2-1-release/</url>
     </release>
-    <release version="0.1.0" date="2018-09-06"/>
   </releases>
 </component>
