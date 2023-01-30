@@ -99,7 +99,7 @@ Maui.Dialog
                             }
                         }
 
-                        Maui.SettingsSection
+                        Maui.SectionGroup
                         {
                             Layout.fillWidth: true
 
@@ -108,7 +108,7 @@ Maui.Dialog
                             Repeater
                             {
                                 model: infoModel
-                                delegate:  Maui.SettingTemplate
+                                delegate:  Maui.SectionItem
                                 {
                                     visible:  model.value ? true : false
                                     Layout.fillWidth: true
