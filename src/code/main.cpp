@@ -13,6 +13,7 @@
 #include "../project_version.h"
 
 #include "code/compressedfile.h"
+#include "code/arca.h"
 
 //Useful for setting quickly an app template
 #define ORG_NAME "Maui"
@@ -68,6 +69,7 @@ int main(int argc, char *argv[])
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
+    qmlRegisterSingletonInstance<Arca>(PROJECT_URI, 1, 0, "Arc", Arca::instance());
     qmlRegisterType<CompressedFile>(PROJECT_URI, 1, 0, "CompressedFile");
 
     engine.load(url);

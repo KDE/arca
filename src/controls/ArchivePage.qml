@@ -21,8 +21,6 @@ Maui.Page
         id: _manager
     }
 
-
-
     headBar.middleContent: Maui.SearchField
     {
         Layout.maximumWidth: 500

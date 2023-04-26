@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(arca VERSION 0.1.1)
+project(arca VERSION 0.5.0)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -77,9 +77,9 @@ add_subdirectory(src)
 
 ki18n_install(po)
 
-install(FILES data/project.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR} RENAME ${PROJECT_URI}.appdata.xml)
+install(FILES data/org.kde.arca.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-install(FILES data/project.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} RENAME ${PROJECT_URI}.desktop)
+install(FILES data/org.kde.arca.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 
 install(FILES src/assets/logo.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps RENAME ${PROJECT_NAME}.svg)
 

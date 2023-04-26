@@ -17,7 +17,6 @@ Maui.ApplicationWindow
 
     property alias dialog : _dialogLoader.item
 
-
     Loader
     {
         id: _dialogLoader
@@ -49,6 +48,7 @@ Maui.ApplicationWindow
         persistent: false
 
         acceptButton.text: i18n("Create")
+        onRejected: close()
 
         TextField
         {
@@ -56,26 +56,42 @@ Maui.ApplicationWindow
             placeholderText: i18n("Archive name...")
         }
 
-        Maui.ListBrowserDelegate
+        TextField
         {
             Layout.fillWidth: true
-            label1.text: "ZIP"
-            iconSource: "application-zip"
+            placeholderText: i18n("Location")
+            text: Arca.Arc.defaultSaveDir
         }
 
-        Maui.ListBrowserDelegate
+        Maui.ToolActions
         {
-            Layout.fillWidth: true
-            label1.text: "TAR"
-            iconSource: "application-x-tar"
+            id: compressType
+            autoExclusive: true
+            expanded: true
+            currentIndex: 0
+            display: ToolButton.TextBesideIcon
+
+            Action
+            {
+                text: ".ZIP"
+                icon.name:  "application-zip"
+            }
+
+            Action
+            {
+                text: ".TAR"
+                icon.name:  "application-x-tar"
+
+            }
+
+            Action
+            {
+                text: ".7ZIP"
+                icon.name:  "application-x-rar"
+
+            }
         }
 
-        Maui.ListBrowserDelegate
-        {
-            Layout.fillWidth: true
-            label1.text: "RAR"
-            iconSource: "application-x-rar"
-        }
     }
 
     Maui.TabView
@@ -148,11 +164,8 @@ Maui.ApplicationWindow
 
         ArchivePage
         {
-
             Maui.TabViewInfo.tabTitle: title
             Maui.TabViewInfo.tabToolTipText:  url
-            height: ListView.view.height
-            width: ListView.view.width
         }
     }
 
