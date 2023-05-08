@@ -68,7 +68,6 @@ Maui.ApplicationWindow
             id: compressType
             autoExclusive: true
             expanded: true
-            currentIndex: 0
             display: ToolButton.TextBesideIcon
 
             Action
