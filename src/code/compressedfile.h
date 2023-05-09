@@ -34,7 +34,7 @@ public:
     void refresh();
     const KArchiveFile *getFile(const QString &path);
 
-public slots:
+public Q_SLOTS:
     void openDir(const QString &path);
     void goUp();
     void goToRoot();
@@ -49,7 +49,7 @@ public slots:
 
     void setCurrentPath(QString currentPath);
 
-signals:
+Q_SIGNALS:
     void currentPathChanged(QString currentPath);
 
     void fileNameChanged(QString fileName);
@@ -93,13 +93,13 @@ private:
     QUrl m_url;
     CompressedFileModel *m_model;
 
-public slots:
+public Q_SLOTS:
     void extract(const QUrl &where, const QString &directory = QString());
-    bool compress(const QVariantList &files, const QUrl &where, const QString &fileName, const int &compressTypeSelected);
+    bool compress(const QStringList &files, const QUrl &where, const QString &fileName, const int &compressTypeSelected);
 
-signals:
+Q_SIGNALS:
     void urlChanged();
-    void extractionFinished(QUrl url);
-    void compressionFinished(QUrl url);
+    void extractionFinished(const QString &url, bool ok);
+    void compressionFinished(const QString &url, bool ok);
 };
 

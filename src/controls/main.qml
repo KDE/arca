@@ -16,6 +16,7 @@ Maui.ApplicationWindow
     title: qsTr("Arca")
 
     property alias dialog : _dialogLoader.item
+    property alias currentTab: _tabView.currentItem
 
     Loader
     {
@@ -26,10 +27,7 @@ Maui.ApplicationWindow
     {
         id: _fileDialogComponent
 
-        FM.FileDialog
-        {
-
-        }
+        FM.FileDialog {}
     }
 
     Component
@@ -42,55 +40,15 @@ Maui.ApplicationWindow
         }
     }
 
-    Maui.Dialog
+    NewArchiveDialog
     {
         id: _newArchiveDialog
-        persistent: false
-
-        acceptButton.text: i18n("Create")
-        onRejected: close()
-
-        TextField
+        onDone:
         {
-            Layout.fillWidth: true
-            placeholderText: i18n("Archive name...")
+           var tab = _tabView.addTab(_archivePageComponent, ({}))
+           tab.create(files, path, name, type)
+            _newArchiveDialog.close()
         }
-
-        TextField
-        {
-            Layout.fillWidth: true
-            placeholderText: i18n("Location")
-            text: Arca.Arc.defaultSaveDir
-        }
-
-        Maui.ToolActions
-        {
-            id: compressType
-            autoExclusive: true
-            expanded: true
-            display: ToolButton.TextBesideIcon
-
-            Action
-            {
-                text: ".ZIP"
-                icon.name:  "application-zip"
-            }
-
-            Action
-            {
-                text: ".TAR"
-                icon.name:  "application-x-tar"
-
-            }
-
-            Action
-            {
-                text: ".7ZIP"
-                icon.name:  "application-x-rar"
-
-            }
-        }
-
     }
 
     Maui.TabView
@@ -105,6 +63,8 @@ Maui.ApplicationWindow
         holder.title: i18n("Compress")
         holder.body: "Drop files in here to compress them."
 
+
+        onCloseTabClicked: _tabView.closeTab(index)
 
         holder.actions: [
 
@@ -121,7 +81,19 @@ Maui.ApplicationWindow
                 id: _createArchiveAction
                 text: i18n("Compress files")
                 icon.name: "archive-insert"
-                onTriggered: _newArchiveDialog.open()
+                onTriggered:
+                {
+                    _dialogLoader.sourceComponent = _fileDialogComponent
+                    dialog.mode = dialog.modes.OPEN
+                    dialog.settings.filterType = FM.FMList.NONE
+                    dialog.callback = (paths) => {
+
+                        _newArchiveDialog.urls = paths
+                        _newArchiveDialog.open()
+                    }
+
+                    dialog.open()
+                }
             }
 
         ]
@@ -184,7 +156,7 @@ Maui.ApplicationWindow
     {
         _dialogLoader.sourceComponent = _fileDialogComponent
         dialog.mode = dialog.modes.OPEN
-        dialog.settings.filterType= FM.FMList.COMPRESSED
+        dialog.settings.filterType = FM.FMList.COMPRESSED
         dialog.callback = (paths) => {
 
             for(var path of paths)

@@ -13,12 +13,36 @@ Maui.Page
 
     id: control
     title: _manager.model.fileName || root.title
+
     property alias url : _manager.url
+
     showTitle: false
 
     Arca.CompressedFile
     {
         id: _manager
+
+        onCompressionFinished:
+        {
+            if(ok)
+            {
+                root.notify("dialog-warning", i18n("Archive Ready"), i18n("The new file is now ready."))
+            }else
+            {
+                root.notify("dialog-error", i18n("Failed"), i18n("The archive could not be created."))
+            }
+        }
+
+        onExtractionFinished:
+        {
+            if(ok)
+            {
+                root.notify("dialog-warning", i18n("Extraction Ready"), i18n("The archive contents have been extracted."))
+            }else
+            {
+                root.notify("dialog-error", i18n("Failed"), i18n("The extraction has failed."))
+            }
+        }
     }
 
     headBar.middleContent: Maui.SearchField
@@ -283,4 +307,8 @@ Maui.Page
         dialog.open()
     }
 
+    function create(files, path, name, type)
+    {
+        _manager.compress(files, path, name, type)
+    }
 }

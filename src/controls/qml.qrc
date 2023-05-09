@@ -11,5 +11,6 @@
         <file>previewer/DefaultPreview.qml</file>
         <file>previewer/FileProperties.qml</file>
         <file>ArchivePage.qml</file>
+        <file>NewArchiveDialog.qml</file>
     </qresource>
 </RCC>
