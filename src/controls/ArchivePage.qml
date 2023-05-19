@@ -160,9 +160,7 @@ Maui.Page
         holder.visible: _browser.count === 0
         holder.emoji: "archive-insert"
         holder.title: i18n("Compress")
-        holder.body: "Drop files in here to compress them."
-
-
+        holder.body: i18n("Drop files in here to compress them.")
 
         delegate: Maui.ListBrowserDelegate
         {
@@ -199,8 +197,6 @@ Maui.Page
                 _menu.item = _browser.model.get(index)
                 _menu.show()
             }
-
-
         }
 
 
@@ -236,9 +232,7 @@ Maui.Page
                 icon.name: "entry-delete"
             }
         }
-
     }
-
 
     Item
     {
@@ -257,7 +251,7 @@ Maui.Page
             anchors.fill: parent
             visible: true
             title: i18n("Add here")
-            body: i18n("Drop file in here to add them to the archive")
+            body: i18n("Drop files in here to add them to the archive.")
             emoji: "archive-insert"
         }
     }
@@ -270,7 +264,6 @@ Maui.Page
         onDropped:
         {
             if(drop.hasUrls)
-
             {
                 var urls = drop.urls.join(",").split(",")
                 console.log("DROP URLS", urls )
