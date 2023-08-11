@@ -8,23 +8,21 @@ set(project_SRCS
     code/compressedfile.cpp
     code/temporaryfile.cpp
     code/arca.cpp
-    assets/assets.qrc
-    )
+    assets/assets.qrc)
 
 qtquick_compiler_add_resources(project_QML_QRC controls/qml.qrc)
 
 add_executable(${PROJECT_NAME}
     ${project_SRCS}
-    ${project_QML_QRC}
-    )
+    ${project_QML_QRC})
 
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-    MauiKit
-    MauiKit::FileBrowsing
+    MauiKit3
+    MauiKit3::FileBrowsing
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Quick
     Qt${QT_VERSION_MAJOR}::Widgets

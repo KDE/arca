@@ -5,7 +5,7 @@
 #include <QIcon>
 #include <QQmlContext>
 
-#include <MauiKit/Core/mauiapp.h>
+#include <MauiKit3/Core/mauiapp.h>
 
 #include <KAboutData>
 #include <KI18n/KLocalizedString>

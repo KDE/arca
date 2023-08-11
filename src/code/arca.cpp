@@ -1,5 +1,5 @@
 #include "arca.h"
-#include <MauiKit/FileBrowsing/fmstatic.h>
+#include <MauiKit3/FileBrowsing/fmstatic.h>
 
 Arca::Arca(QObject *parent) : QObject(parent)
   ,m_defaultSaveDir(FMStatic::DocumentsPath)

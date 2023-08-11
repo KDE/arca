@@ -6,7 +6,7 @@ import org.mauikit.controls 1.3 as Maui
 
 import org.mauikit.filebrowsing 1.3 as FB
 
-Maui.Dialog
+Maui.PopupPage
 {
     id: control
     implicitHeight: 1000
@@ -19,7 +19,6 @@ Maui.Dialog
     hint: 1
     maxWidth: 800
     maxHeight: implicitHeight
-    defaultButtons: false
 
     title: iteminfo.path
 

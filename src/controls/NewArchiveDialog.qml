@@ -15,23 +15,33 @@ Maui.FileListingDialog
 
     message: i18n("Create a new archive file.")
 
-    acceptButton.text: i18n("Create")
+    actions:[
+        Action
+        {
+            text: i18n("Cancel")
+            onTriggered: close()
+        },
+        Action
+        {
+            text: i18n("Create")
+            onTriggered:
+            {
+                const ok = control.checkExistance(_archiveNameField.text, _locationField.text, control.extensionName(control.type))
+
+                if(!ok)
+                {
+                    return
+                }else
+                {
+                    control.done(control.urls, _locationField.text, _archiveNameField.text, control.type)
+                    //            control.close()
+                }
+            }
+        }
+    ]
+
     onOpened: _archiveNameField.forceActiveFocus()
 
-    onRejected: close()
-    onAccepted:
-    {
-        const ok = control.checkExistance(_archiveNameField.text, _locationField.text, control.extensionName(control.type))
-
-        if(!ok)
-        {
-            return
-        }else
-        {
-            control.done(control.urls, _locationField.text, _archiveNameField.text, control.type)
-//            control.close()
-        }
-    }
 
     signal done(var files, string path, string name, int type)
 
