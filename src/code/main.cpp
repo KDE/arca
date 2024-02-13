@@ -1,7 +1,6 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QCommandLineParser>
-#include <QDate>
 #include <QIcon>
 #include <QQmlContext>
 
@@ -20,7 +19,6 @@
 #define PROJECT_NAME "Arca"
 #define COMPONENT_NAME "arca"
 #define PROJECT_DESCRIPTION "Archive manager and explorer."
-#define PROJECT_YEAR "2022"
 #define PRODUCT_NAME "maui/arca"
 #define PROJECT_PAGE "https://mauikit.org"
 #define REPORT_PAGE "https://github.com/Nitrux/arca/issues/new"
@@ -37,10 +35,15 @@ int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain(COMPONENT_NAME);
 
-    KAboutData about(QStringLiteral(COMPONENT_NAME), i18n(PROJECT_NAME), PROJECT_VERSION_STRING, i18n(PROJECT_DESCRIPTION),
-                     KAboutLicense::LGPL_V3, QString("© %1-%2 %3 Development Team").arg(PROJECT_YEAR, QString::number(QDate::currentDate().year()), ORG_NAME), QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
+    KAboutData about(QStringLiteral(COMPONENT_NAME), 
+                     QStringLiteral(PROJECT_NAME), 
+                     PROJECT_VERSION_STRING, 
+                     i18n(PROJECT_DESCRIPTION),
+                     KAboutLicense::LGPL_V3, 
+                    APP_COPYRIGHT_NOTICE, 
+                     QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
 
-    about.addAuthor(i18n("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
+    about.addAuthor(QStringLiteral("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
 
     about.setHomepage(PROJECT_PAGE);
     about.setProductName(PRODUCT_NAME);

@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(arca VERSION 0.5.2)
+add_compile_definitions(APP_COPYRIGHT_NOTICE="© 2022-2024 Maui Development Team")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
