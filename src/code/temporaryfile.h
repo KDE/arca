@@ -17,8 +17,7 @@ public:
 private:
     QTemporaryFile *m_file;
 
-signals:
-
+Q_SIGNALS:
     void fileReady(QString url);
 
 };

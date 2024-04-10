@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(arca VERSION 0.5.3)
+project(arca VERSION 1.0.0)
 add_compile_definitions(APP_COPYRIGHT_NOTICE="© 2022-2024 Maui Development Team")
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -12,14 +12,15 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(REQUIRED_KF5_VERSION 5.77.0)
-set(QT_MIN_VERSION "5.15.2")
-set(KF5_MIN_VERSION "5.92.0")
+set(QT_MAJOR_VERSION 6)
+
+set(REQUIRED_QT_VERSION 6.5.2)
+set(REQUIRED_KF_VERSION 5.240.0)
 
 set(PROJECT_URI "org.kde.${PROJECT_NAME}")
 add_definitions(-DPROJECT_URI="${PROJECT_URI}")
 
-find_package(ECM ${REQUIRED_KF5_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${REQUIRED_KF_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
@@ -33,16 +34,10 @@ include(ECMSourceVersionControl)
 include(FeatureSummary)
 include(ECMQMLModules)
 
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Quick Widgets)
-find_package(KF5 ${REQUIRED_KF5_VERSION} REQUIRED COMPONENTS I18n CoreAddons Archive)
+find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Core Quick Widgets)
+find_package(KF6 ${REQUIRED_KF_VERSION} REQUIRED COMPONENTS I18n CoreAddons Archive)
 
-find_package(Qt5QuickCompiler)
-set_package_properties(Qt5QuickCompiler PROPERTIES
-    DESCRIPTION "Compile QML at build time"
-    TYPE OPTIONAL)
-
-find_package(MauiKit3)
-find_package(MauiKit3 COMPONENTS FileBrowsing)
+find_package(MauiKit4 COMPONENTS FileBrowsing)
 
 if(ECM_SOURCE_UNDER_VERSION_CONTROL)
     execute_process(
@@ -76,7 +71,7 @@ ki18n_install(po)
 
 install(FILES data/org.kde.arca.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-install(FILES data/org.kde.arca.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(FILES data/org.kde.arca.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 install(FILES src/assets/logo.svg DESTINATION ${KDE_INSTALL_ICONDIR}/hicolor/scalable/apps RENAME ${PROJECT_NAME}.svg)
 

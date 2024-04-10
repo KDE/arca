@@ -1,5 +1,7 @@
 #include "arca.h"
-#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
+
+Q_GLOBAL_STATIC(Arca, arcaInstance)
 
 Arca::Arca(QObject *parent) : QObject(parent)
   ,m_defaultSaveDir(FMStatic::DocumentsPath)
@@ -13,6 +15,11 @@ Arca::Arca(QObject *parent) : QObject(parent)
 Arca::~Arca()
 {
     m_settings->sync();
+}
+
+Arca *Arca::instance()
+{
+    return arcaInstance();
 }
 
 QString Arca::defaultSaveDir() const

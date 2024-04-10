@@ -1,12 +1,12 @@
-import QtQuick 2.15
-import QtQml 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.12
+import QtQuick
+import QtQml
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.mauikit.controls 1.3 as Maui
-import org.mauikit.filebrowsing 1.3 as FM
+import org.mauikit.controls as Maui
+import org.mauikit.filebrowsing as FM
 
-import org.kde.arca 1.0 as Arca
+import org.kde.arca as Arca
 
 import "previewer"
 
@@ -63,7 +63,7 @@ Maui.ApplicationWindow
         holder.title: i18n("Compress")
         holder.body: "Drop files in here to compress them."
 
-
+Maui.Controls.showCSD: true
         onCloseTabClicked: _tabView.closeTab(index)
 
         holder.actions: [
@@ -84,8 +84,8 @@ Maui.ApplicationWindow
                 onTriggered:
                 {
                     _dialogLoader.sourceComponent = _fileDialogComponent
-                    dialog.mode = dialog.modes.OPEN
-                    dialog.settings.filterType = FM.FMList.NONE
+                    dialog.mode = FM.FileDialog.Open
+                    dialog.browser.settings.filterType = FM.FMList.NONE
                     dialog.callback = (paths) => {
 
                         _newArchiveDialog.urls = paths
@@ -122,10 +122,7 @@ Maui.ApplicationWindow
                     icon.name: "documentinfo"
                     onTriggered: root.about()
                 }
-            },
-
-            Maui.WindowControls {}
-
+            }
         ]
     }
 
@@ -155,8 +152,8 @@ Maui.ApplicationWindow
     function openFileDialog()
     {
         _dialogLoader.sourceComponent = _fileDialogComponent
-        dialog.mode = dialog.modes.OPEN
-        dialog.settings.filterType = FM.FMList.COMPRESSED
+        dialog.mode = FM.FileDialog.Open
+        dialog.browser.settings.filterType = FM.FMList.COMPRESSED
         dialog.callback = (paths) => {
 
             for(var path of paths)

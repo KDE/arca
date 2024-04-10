@@ -4,10 +4,10 @@
 #include <QIcon>
 #include <QQmlContext>
 
-#include <MauiKit3/Core/mauiapp.h>
+#include <MauiKit4/Core/mauiapp.h>
 
 #include <KAboutData>
-#include <KI18n/KLocalizedString>
+#include <KLocalizedString>
 
 #include "../project_version.h"
 
@@ -25,8 +25,6 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-
     QApplication app(argc, argv);
 
     app.setOrganizationName(QStringLiteral(ORG_NAME));

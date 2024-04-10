@@ -1,20 +1,17 @@
 #include "compressedfile.h"
 
-#include <KArchive/KTar>
-#include <KArchive/KZip>
-#include <KArchive/kcompressiondevice.h>
-#include <KArchive/kfilterdev.h>
+#include <KTar>
+#include <KZip>
+#include <KAr>
 
 #if (defined Q_OS_LINUX || defined Q_OS_FREEBSD) && !defined Q_OS_ANDROID
-#include <KArchive/k7zip.h>
+#include <K7Zip>
 #endif
-
-#include <KArchive/kar.h>
 
 #include <QDirIterator>
 #include <QDebug>
 
-#include <MauiKit3/FileBrowsing/fmstatic.h>
+#include <MauiKit4/FileBrowsing/fmstatic.h>
 
 #include "temporaryfile.h"
 
@@ -125,7 +122,7 @@ void CompressedFileModel::openDir(const QString &path)
                 m_list.clear();
                 Q_EMIT this->preListChanged();
 
-                for(const auto file : subDir->entries())
+                for(const auto &file : subDir->entries())
                 {
                     const auto e = subDir->entry(file);
                     this->m_list << FMH::MODEL{{FMH::MODEL_KEY::IS_DIR, e->isDirectory() ? "true" : "false"}, {FMH::MODEL_KEY::LABEL, e->name()}, {FMH::MODEL_KEY::ICON, e->isDirectory() ? "folder" : FMStatic::getIconName(e->name())}, {FMH::MODEL_KEY::DATE, e->date().toString()}, {FMH::MODEL_KEY::PATH, QString(path+"%1/").arg(e->name())}, {FMH::MODEL_KEY::USER, e->user()}};
