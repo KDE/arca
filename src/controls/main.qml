@@ -5,6 +5,7 @@ import QtQuick.Layouts
 
 import org.mauikit.controls as Maui
 import org.mauikit.filebrowsing as FM
+import org.mauikit.archiver as Arc
 
 import org.kde.arca as Arca
 
@@ -130,7 +131,7 @@ Maui.Controls.showCSD: true
     {
         id: _archivePageComponent
 
-        ArchivePage
+        Arc.ArchivePage
         {
             Maui.TabViewInfo.tabTitle: title
             Maui.TabViewInfo.tabToolTipText:  url

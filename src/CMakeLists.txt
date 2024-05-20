@@ -25,6 +25,7 @@ target_link_libraries(${PROJECT_NAME}
     PRIVATE
     MauiKit4
     MauiKit4::FileBrowsing
+    MauiKit4::Archiver
     Qt6::Core
     Qt6::Quick
     Qt6::Widgets

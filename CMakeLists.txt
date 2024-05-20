@@ -25,19 +25,16 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(ECMInstallIcons)
-include(ECMAddAppIcon)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(KDEClangFormat)
 include(ECMSetupVersion)
 include(ECMSourceVersionControl)
 include(FeatureSummary)
-include(ECMQMLModules)
 
 find_package(Qt6 ${REQUIRED_QT_VERSION} REQUIRED COMPONENTS Core Quick Widgets)
 find_package(KF6 ${REQUIRED_KF_VERSION} REQUIRED COMPONENTS I18n CoreAddons Archive)
 
-find_package(MauiKit4 COMPONENTS FileBrowsing)
+find_package(MauiKit4 COMPONENTS FileBrowsing Archiver)
 
 if(ECM_SOURCE_UNDER_VERSION_CONTROL)
     execute_process(
