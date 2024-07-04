@@ -5,6 +5,7 @@
 #include <QQmlContext>
 
 #include <MauiKit4/Core/mauiapp.h>
+#include <MauiKit4/Archiver/moduleinfo.h>
 
 #include <KAboutData>
 #include <KLocalizedString>
@@ -32,12 +33,12 @@ int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain(COMPONENT_NAME);
 
-    KAboutData about(QStringLiteral(COMPONENT_NAME), 
-                     QStringLiteral(PROJECT_NAME), 
-                     PROJECT_VERSION_STRING, 
+    KAboutData about(QStringLiteral(COMPONENT_NAME),
+                     QStringLiteral(PROJECT_NAME),
+                     PROJECT_VERSION_STRING,
                      i18n(PROJECT_DESCRIPTION),
-                     KAboutLicense::LGPL_V3, 
-                    APP_COPYRIGHT_NOTICE, 
+                     KAboutLicense::LGPL_V3,
+                    APP_COPYRIGHT_NOTICE,
                      QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
 
     about.addAuthor(QStringLiteral("Camilo Higuita"), i18n("Developer"), QStringLiteral("milo.h@aol.com"));
@@ -47,6 +48,9 @@ int main(int argc, char *argv[])
     about.setBugAddress(REPORT_PAGE);
     about.setOrganizationDomain(PROJECT_URI);
     about.setProgramLogo(app.windowIcon());
+
+    const auto TData = MauiKitArchiver::aboutData();
+    about.addComponent(TData.name(), MauiKitArchiver::buildVersion(), TData.version(), TData.webAddress());
 
     KAboutData::setApplicationData(about);
     MauiApp::instance()->setIconName("qrc:/logo.svg");

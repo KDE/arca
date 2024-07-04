@@ -64,7 +64,7 @@ Maui.ApplicationWindow
         holder.title: i18n("Compress")
         holder.body: "Drop files in here to compress them."
 
-Maui.Controls.showCSD: true
+        Maui.Controls.showCSD: true
         onCloseTabClicked: _tabView.closeTab(index)
 
         holder.actions: [
@@ -133,8 +133,8 @@ Maui.Controls.showCSD: true
 
         Arc.ArchivePage
         {
-            Maui.TabViewInfo.tabTitle: title
-            Maui.TabViewInfo.tabToolTipText:  url
+            Maui.Controls.title: title
+            Maui.Controls.toolTipText:  url
         }
     }
 
