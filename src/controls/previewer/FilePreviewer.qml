@@ -1,10 +1,9 @@
-import QtQuick 2.14
-import QtQuick.Controls 2.14
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.mauikit.controls as Maui
 
-import org.mauikit.controls 1.3 as Maui
-
-import org.mauikit.filebrowsing 1.3 as FB
+import org.mauikit.filebrowsing as FB
 
 Maui.PopupPage
 {
@@ -13,127 +12,20 @@ Maui.PopupPage
     property url currentUrl: ""
     property var iteminfo: FB.FM.getFileInfo(control.currentUrl)
 
-    ListModel { id: infoModel }
-
-
     hint: 1
     maxWidth: 800
     maxHeight: implicitHeight
 
-    title: iteminfo.path
+    // title: iteminfo.label
 
-    headBar.rightContent: ToolButton
+    stack: Loader
     {
-        icon.name: "documentinfo"
-        checkable: true
-        checked: _stackView.depth === 2
-        onClicked:
-        {
-            if(_stackView.depth === 2)
-            {
-                _stackView.pop()
-            }else
-            {
-                _stackView.push(_infoComponent)
-            }
-
-        }
-    }
-
-    stack:  StackView
-    {
-        id: _stackView
+        id: previewLoader
         Layout.fillHeight: true
         Layout.fillWidth: true
-
-        initialItem: Loader
-        {
-            id: previewLoader
-            asynchronous: true
-            active: control.visible
-            source: show()
-        }
-
-        Component
-        {
-            id: _infoComponent
-
-            ScrollView
-            {
-                contentHeight: _layout.implicitHeight
-                contentWidth: availableWidth
-                clip: true
-                padding: Maui.Style.space.big
-                background: null
-
-                Component.onCompleted:
-                {
-                           initModel()
-                }
-
-                Flickable
-                {
-                    boundsBehavior: Flickable.StopAtBounds
-                    boundsMovement: Flickable.StopAtBounds
-
-                    ColumnLayout
-                    {
-                        id: _layout
-                        width: parent.width
-                        spacing: Maui.Style.space.huge
-
-                        Item
-                        {
-                            Layout.fillWidth: true
-                            Layout.preferredHeight: 150
-
-                            Maui.IconItem
-                            {
-                                height: parent.height * 0.9
-                                width: height
-                                anchors.centerIn: parent
-                                iconSource: iteminfo.icon
-                                imageSource: iteminfo.thumbnail
-                                iconSizeHint: Maui.Style.iconSizes.large
-                            }
-                        }
-
-                        Maui.SectionGroup
-                        {
-                            Layout.fillWidth: true
-
-                            title: i18n("Details")
-                            description: i18n("File information")
-                            Repeater
-                            {
-                                model: infoModel
-                                delegate:  Maui.SectionItem
-                                {
-                                    visible:  model.value ? true : false
-                                    Layout.fillWidth: true
-                                    label1.text: model.key
-                                    label2.text: model.value
-                                    label2.wrapMode: Text.Wrap
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-
-    footBar.rightContent: Button
-    {
-        text: i18n("Open")
-        icon.name: "document-open"
-        //        flat: true
-        onClicked:
-        {
-            currentBrowser.openFile(control.currentUrl)
-        }
+        asynchronous: true
+        active: control.visible
+        source: show()
     }
 
     function show()
@@ -163,24 +55,6 @@ Maui.PopupPage
         }
 
         return source;
-    }
-
-
-    function initModel()
-    {
-        infoModel.clear()
-        infoModel.append({key: "Name", value: iteminfo.label})
-        infoModel.append({key: "Type", value: iteminfo.mime})
-        infoModel.append({key: "Date", value: Qt.formatDateTime(new Date(model.date), "d MMM yyyy")})
-        infoModel.append({key: "Modified", value: Qt.formatDateTime(new Date(model.modified), "d MMM yyyy")})
-        infoModel.append({key: "Last Read", value: Qt.formatDateTime(new Date(model.lastread), "d MMM yyyy")})
-        infoModel.append({key: "Owner", value: iteminfo.owner})
-        infoModel.append({key: "Group", value: iteminfo.group})
-        infoModel.append({key: "Size", value: Maui.Handy.formatSize(iteminfo.size)})
-        infoModel.append({key: "Symbolic Link", value: iteminfo.symlink})
-        infoModel.append({key: "Path", value: iteminfo.path})
-        infoModel.append({key: "Thumbnail", value: iteminfo.thumbnail})
-        infoModel.append({key: "Icon Name", value: iteminfo.icon})
     }
 
 

@@ -7,16 +7,27 @@ remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FR
 
 set(project_SRCS
     code/main.cpp
-    code/compressedfile.cpp
-    code/temporaryfile.cpp
-    code/arca.cpp
-    assets/assets.qrc)
+    code/arca.cpp)
 
-qt_add_resources(project_QML_QRC controls/qml.qrc)
+qt_add_resources(project_QRC  assets/assets.qrc)
 
-add_executable(${PROJECT_NAME}
+qt_add_executable(${PROJECT_NAME}
     ${project_SRCS}
-    ${project_QML_QRC})
+    ${project_QRC})
+
+qt_add_qml_module(${PROJECT_NAME} URI app.maui.arca
+    NO_PLUGIN
+    QML_FILES
+    controls/main.qml
+    controls/previewer/VideoPreview.qml
+    controls/previewer/AudioPreview.qml
+    controls/previewer/DocumentPreview.qml
+    controls/previewer/ImagePreview.qml
+    controls/previewer/FontPreviewer.qml
+    controls/previewer/TextPreview.qml
+    controls/previewer/FilePreviewer.qml
+    controls/previewer/DefaultPreview.qml
+    controls/previewer/FileProperties.qml)
 
 target_compile_definitions(${PROJECT_NAME}
     PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)

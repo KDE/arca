@@ -41,15 +41,15 @@ Maui.ApplicationWindow
         }
     }
 
-    NewArchiveDialog
+    Arc.NewArchiveDialog
     {
         id: _newArchiveDialog
-        onDone:
-        {
-           var tab = _tabView.addTab(_archivePageComponent, ({}))
-           tab.create(files, path, name, type)
-            _newArchiveDialog.close()
-        }
+        onDone: (files, path, name, type) =>
+                {
+                    var tab = _tabView.addTab(_archivePageComponent, ({}))
+                    tab.create(files, path, name, type)
+                    _newArchiveDialog.close()
+                }
     }
 
     Maui.TabView
@@ -135,6 +135,18 @@ Maui.ApplicationWindow
         {
             Maui.Controls.title: title
             Maui.Controls.toolTipText:  url
+
+            onItemClicked: (index, item) =>
+                           {
+                               if(item.isdir === "true")
+                               {
+                                   openItem(item)
+                               }else
+                               {
+                                   var url = manager.temporaryFile(item.path)
+                                   previewFile(url)
+                               }
+                           }
         }
     }
 

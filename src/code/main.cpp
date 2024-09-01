@@ -18,7 +18,6 @@
 #define ORG_NAME "Maui"
 #define PROJECT_NAME "Arca"
 #define COMPONENT_NAME "arca"
-#define PROJECT_DESCRIPTION "Archive manager and explorer."
 #define PRODUCT_NAME "maui/arca"
 #define PROJECT_PAGE "https://mauikit.org"
 #define REPORT_PAGE "https://github.com/Nitrux/arca/issues/new"
@@ -36,7 +35,7 @@ int main(int argc, char *argv[])
     KAboutData about(QStringLiteral(COMPONENT_NAME),
                      QStringLiteral(PROJECT_NAME),
                      PROJECT_VERSION_STRING,
-                     i18n(PROJECT_DESCRIPTION),
+                     i18n("Archive manager and explorer."),
                      KAboutLicense::LGPL_V3,
                     APP_COPYRIGHT_NOTICE,
                      QString(GIT_BRANCH) + "/" + QString(GIT_COMMIT_HASH));
@@ -63,7 +62,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
 
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
+    const QUrl url(QStringLiteral("qrc:/app/maui/arca/controls/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
