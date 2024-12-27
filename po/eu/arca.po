@@ -1,0 +1,125 @@
+# Translation for arca.po to Euskara/Basque (eu).
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the arca package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
+msgid ""
+msgstr ""
+"Project-Id-Version: arca\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-26 00:40+0000\n"
+"PO-Revision-Date: 2024-12-26 20:39+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.12.0\n"
+
+#: src/code/main.cpp:38
+#, kde-format
+msgid "Archive manager and explorer."
+msgstr "Artxibo-kudeatzailea eta -esploratzailea."
+
+#: src/code/main.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr "Garatzailea"
+
+#: src/controls/main.qml:64
+#, kde-format
+msgid "Compress"
+msgstr "Konprimatu"
+
+#: src/controls/main.qml:76
+#, kde-format
+msgid "Open archive"
+msgstr "Ireki artxiboa"
+
+#: src/controls/main.qml:83
+#, kde-format
+msgid "Compress files"
+msgstr "Konprimitu fitxategiak"
+
+#: src/controls/main.qml:122
+#, kde-format
+msgid "About"
+msgstr "Honi buruz"
+
+#: src/controls/previewer/CompressedPreview.qml:15
+#, kde-format
+msgid "Extract"
+msgstr "Erauzi"
+
+#: src/controls/previewer/FileProperties.qml:44
+#, kde-format
+msgid "Permissions"
+msgstr "Baimenak"
+
+#: src/controls/previewer/FileProperties.qml:45
+#: src/controls/previewer/FileProperties.qml:148
+#, kde-format
+msgid "Set file permissions to access this file"
+msgstr "Ezarri fitxategi hau atzitzeko baimenak"
+
+#: src/controls/previewer/FileProperties.qml:49
+#: src/controls/previewer/FileProperties.qml:152
+#, kde-format
+msgid "Owner"
+msgstr "Jabea"
+
+#: src/controls/previewer/FileProperties.qml:58
+#: src/controls/previewer/FileProperties.qml:90
+#: src/controls/previewer/FileProperties.qml:122
+#, kde-format
+msgid "Read"
+msgstr "Irakurri"
+
+#: src/controls/previewer/FileProperties.qml:65
+#: src/controls/previewer/FileProperties.qml:97
+#: src/controls/previewer/FileProperties.qml:128
+#, kde-format
+msgid "Write"
+msgstr "Idatzi"
+
+#: src/controls/previewer/FileProperties.qml:72
+#: src/controls/previewer/FileProperties.qml:105
+#: src/controls/previewer/FileProperties.qml:134
+#, kde-format
+msgid "Execute"
+msgstr "Exekutatu"
+
+#: src/controls/previewer/FileProperties.qml:80
+#: src/controls/previewer/FileProperties.qml:159
+#, kde-format
+msgid "Group"
+msgstr "Taldea"
+
+#: src/controls/previewer/FileProperties.qml:113
+#, kde-format
+msgid "Everyone"
+msgstr "Edonor"
+
+#: src/controls/previewer/FileProperties.qml:147
+#, kde-format
+msgid "Ownership"
+msgstr "Jabetza"
+
+#: src/controls/previewer/FileProperties.qml:165
+#, kde-format
+msgid "Users"
+msgstr "Erabiltzaileak"
+
+#: src/controls/previewer/FileProperties.qml:174
+#, kde-format
+msgid "Groups"
+msgstr "Taldeak"
+
+#: src/controls/previewer/FontPreviewer.qml:31
+#, kde-format
+msgid "Install"
+msgstr "Instalatu"
