@@ -7,7 +7,10 @@
   <name xml:lang="ca">Arca</name>
   <name xml:lang="es">Arca</name>
   <name xml:lang="eu">Arca</name>
+  <name xml:lang="gl">Arca</name>
+  <name xml:lang="ka">Arca</name>
   <name xml:lang="nl">Arca</name>
+  <name xml:lang="sl">Arca</name>
   <name xml:lang="tr">Arca</name>
   <name xml:lang="uk">Арка</name>
   <name xml:lang="x-test">xxArcaxx</name>
@@ -15,7 +18,10 @@
   <summary xml:lang="ca">Gestor d'arxius</summary>
   <summary xml:lang="es">Gestor de archivadores</summary>
   <summary xml:lang="eu">Artxibo-kudeatzailea</summary>
+  <summary xml:lang="gl">Xestor de arquivos.</summary>
+  <summary xml:lang="ka">არქივის მმართველი</summary>
   <summary xml:lang="nl">Archiefbeheerder</summary>
+  <summary xml:lang="sl">Upravljalnik arhiva</summary>
   <summary xml:lang="tr">Arşiv Yöneticisi</summary>
   <summary xml:lang="uk">Менеджер архівів</summary>
   <summary xml:lang="x-test">xxArchive managerxx</summary>
@@ -24,7 +30,10 @@
     <p xml:lang="ca">Navegueu, creeu, i editeu arxius.</p>
     <p xml:lang="es">Explorar, crear y gestionar archivadores.</p>
     <p xml:lang="eu">Artxiboak arakatu, sortu eta kudeatu.</p>
+    <p xml:lang="gl">Examine, cree e xestione arquivos.</p>
+    <p xml:lang="ka">დაათვალიერეთ, შექმენით და მართეთ არქივები.</p>
     <p xml:lang="nl">Door archieven bladeren, ze aanmaken en beheren.</p>
+    <p xml:lang="sl">Brskajte, kreirajte in upravljajte arhive.</p>
     <p xml:lang="tr">Arşivlere göz atın, arşiv oluşturun ve onları yönetin.</p>
     <p xml:lang="uk">Перегляд архівів, створення та керування ними</p>
     <p xml:lang="x-test">xxBrowse, create and manage archives.xx</p>
@@ -38,7 +47,10 @@
       <caption xml:lang="ca">Arca - Versió mòbil</caption>
       <caption xml:lang="es">Arca - versión móvil</caption>
       <caption xml:lang="eu">Arca - mugikorrerako bertsioa</caption>
+      <caption xml:lang="gl">Arca, versión móbil.</caption>
+      <caption xml:lang="ka">Arca - მობილური ვერსია</caption>
       <caption xml:lang="nl">Arca - mobiele versie</caption>
+      <caption xml:lang="sl">Arca - mobilna različica</caption>
       <caption xml:lang="tr">Arca — Taşınabilir sürüm</caption>
       <caption xml:lang="uk">Арка — мобільна версія</caption>
       <caption xml:lang="x-test">xxArca - mobile versionxx</caption>
