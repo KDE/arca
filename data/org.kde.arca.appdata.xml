@@ -11,6 +11,7 @@
   <name xml:lang="fr">Arca</name>
   <name xml:lang="gl">Arca</name>
   <name xml:lang="he">Arca</name>
+  <name xml:lang="it">Arca</name>
   <name xml:lang="ka">Arca</name>
   <name xml:lang="nl">Arca</name>
   <name xml:lang="sa">आर्का</name>
@@ -26,6 +27,7 @@
   <summary xml:lang="fr">Gestionnaire d'archives</summary>
   <summary xml:lang="gl">Xestor de arquivos.</summary>
   <summary xml:lang="he">מנהל ארכיונים</summary>
+  <summary xml:lang="it">Gestore di archivi</summary>
   <summary xml:lang="ka">არქივის მმართველი</summary>
   <summary xml:lang="nl">Archiefbeheerder</summary>
   <summary xml:lang="sa">अभिलेखागार प्रबन्धक</summary>
@@ -42,6 +44,7 @@
     <p xml:lang="fr">Naviguer, créer et gérer des archives.</p>
     <p xml:lang="gl">Examine, cree e xestione arquivos.</p>
     <p xml:lang="he">עיון, יצירה וניהול של ארכיונים.</p>
+    <p xml:lang="it">Esplora, crea e gestisci archivi.</p>
     <p xml:lang="ka">დაათვალიერეთ, შექმენით და მართეთ არქივები.</p>
     <p xml:lang="nl">Door archieven bladeren, ze aanmaken en beheren.</p>
     <p xml:lang="sa">अभिलेखागारं ब्राउज् कुर्वन्तु, रचयन्तु, प्रबन्धयन्तु च ।</p>
@@ -63,6 +66,7 @@
       <caption xml:lang="fr">Arca - Version mobile</caption>
       <caption xml:lang="gl">Arca, versión móbil.</caption>
       <caption xml:lang="he">Arca - גרסה לניידים</caption>
+      <caption xml:lang="it">Arca - versione mobile</caption>
       <caption xml:lang="ka">Arca - მობილური ვერსია</caption>
       <caption xml:lang="nl">Arca - mobiele versie</caption>
       <caption xml:lang="sa">आर्का - मोबाइल संस्करण</caption>
