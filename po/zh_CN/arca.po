@@ -20,103 +20,103 @@ msgstr ""
 #: src/code/main.cpp:38
 #, kde-format
 msgid "Archive manager and explorer."
-msgstr ""
+msgstr "压缩文件管理器与资源管理器"
 
 #: src/code/main.cpp:43
 #, kde-format
 msgid "Developer"
-msgstr ""
+msgstr "开发者"
 
 #: src/controls/main.qml:64
 #, kde-format
 msgid "Compress"
-msgstr ""
+msgstr "压缩"
 
 #: src/controls/main.qml:76
 #, kde-format
 msgid "Open archive"
-msgstr ""
+msgstr "打开压缩文件"
 
 #: src/controls/main.qml:83
 #, kde-format
 msgid "Compress files"
-msgstr ""
+msgstr "压缩文件"
 
 #: src/controls/main.qml:122
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: src/controls/previewer/CompressedPreview.qml:15
 #, kde-format
 msgid "Extract"
-msgstr ""
+msgstr "解压缩"
 
 #: src/controls/previewer/FileProperties.qml:44
 #, kde-format
 msgid "Permissions"
-msgstr ""
+msgstr "权限"
 
 #: src/controls/previewer/FileProperties.qml:45
 #: src/controls/previewer/FileProperties.qml:148
 #, kde-format
 msgid "Set file permissions to access this file"
-msgstr ""
+msgstr "设置访问此文件的权限"
 
 #: src/controls/previewer/FileProperties.qml:49
 #: src/controls/previewer/FileProperties.qml:152
 #, kde-format
 msgid "Owner"
-msgstr ""
+msgstr "所有者"
 
 #: src/controls/previewer/FileProperties.qml:58
 #: src/controls/previewer/FileProperties.qml:90
 #: src/controls/previewer/FileProperties.qml:122
 #, kde-format
 msgid "Read"
-msgstr ""
+msgstr "读取"
 
 #: src/controls/previewer/FileProperties.qml:65
 #: src/controls/previewer/FileProperties.qml:97
 #: src/controls/previewer/FileProperties.qml:128
 #, kde-format
 msgid "Write"
-msgstr ""
+msgstr "写入"
 
 #: src/controls/previewer/FileProperties.qml:72
 #: src/controls/previewer/FileProperties.qml:105
 #: src/controls/previewer/FileProperties.qml:134
 #, kde-format
 msgid "Execute"
-msgstr ""
+msgstr "执行"
 
 #: src/controls/previewer/FileProperties.qml:80
 #: src/controls/previewer/FileProperties.qml:159
 #, kde-format
 msgid "Group"
-msgstr ""
+msgstr "分组"
 
 #: src/controls/previewer/FileProperties.qml:113
 #, kde-format
 msgid "Everyone"
-msgstr ""
+msgstr "任何用户"
 
 #: src/controls/previewer/FileProperties.qml:147
 #, kde-format
 msgid "Ownership"
-msgstr ""
+msgstr "所有关系"
 
 #: src/controls/previewer/FileProperties.qml:165
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "用户"
 
 #: src/controls/previewer/FileProperties.qml:174
 #, kde-format
 msgid "Groups"
-msgstr ""
+msgstr "组"
 
 #: src/controls/previewer/FontPreviewer.qml:31
 #, kde-format
 msgid "Install"
-msgstr ""
+msgstr "安装"
