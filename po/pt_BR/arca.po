@@ -1,0 +1,122 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the arca package.
+#
+# SPDX-FileCopyrightText: 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: arca\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-26 00:40+0000\n"
+"PO-Revision-Date: 2025-02-06 00:58-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.12.1\n"
+
+#: src/code/main.cpp:38
+#, kde-format
+msgid "Archive manager and explorer."
+msgstr "Gerenciador de arquivos compactados."
+
+#: src/code/main.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr "Desenvolvedor"
+
+#: src/controls/main.qml:64
+#, kde-format
+msgid "Compress"
+msgstr "Compactar"
+
+#: src/controls/main.qml:76
+#, kde-format
+msgid "Open archive"
+msgstr "Abrir arquivo"
+
+#: src/controls/main.qml:83
+#, kde-format
+msgid "Compress files"
+msgstr "Compactar arquivos"
+
+#: src/controls/main.qml:122
+#, kde-format
+msgid "About"
+msgstr "Sobre"
+
+#: src/controls/previewer/CompressedPreview.qml:15
+#, kde-format
+msgid "Extract"
+msgstr "Extrair"
+
+#: src/controls/previewer/FileProperties.qml:44
+#, kde-format
+msgid "Permissions"
+msgstr "Permissões"
+
+#: src/controls/previewer/FileProperties.qml:45
+#: src/controls/previewer/FileProperties.qml:148
+#, kde-format
+msgid "Set file permissions to access this file"
+msgstr "Definir permissões de arquivo para acessar este arquivo"
+
+#: src/controls/previewer/FileProperties.qml:49
+#: src/controls/previewer/FileProperties.qml:152
+#, kde-format
+msgid "Owner"
+msgstr "Proprietário"
+
+#: src/controls/previewer/FileProperties.qml:58
+#: src/controls/previewer/FileProperties.qml:90
+#: src/controls/previewer/FileProperties.qml:122
+#, kde-format
+msgid "Read"
+msgstr "Lido"
+
+#: src/controls/previewer/FileProperties.qml:65
+#: src/controls/previewer/FileProperties.qml:97
+#: src/controls/previewer/FileProperties.qml:128
+#, kde-format
+msgid "Write"
+msgstr "Gravação"
+
+#: src/controls/previewer/FileProperties.qml:72
+#: src/controls/previewer/FileProperties.qml:105
+#: src/controls/previewer/FileProperties.qml:134
+#, kde-format
+msgid "Execute"
+msgstr "Executar"
+
+#: src/controls/previewer/FileProperties.qml:80
+#: src/controls/previewer/FileProperties.qml:159
+#, kde-format
+msgid "Group"
+msgstr "Grupo"
+
+#: src/controls/previewer/FileProperties.qml:113
+#, kde-format
+msgid "Everyone"
+msgstr "Qualquer um"
+
+#: src/controls/previewer/FileProperties.qml:147
+#, kde-format
+msgid "Ownership"
+msgstr "Propriedade"
+
+#: src/controls/previewer/FileProperties.qml:165
+#, kde-format
+msgid "Users"
+msgstr "Usuários"
+
+#: src/controls/previewer/FileProperties.qml:174
+#, kde-format
+msgid "Groups"
+msgstr "Grupos"
+
+#: src/controls/previewer/FontPreviewer.qml:31
+#, kde-format
+msgid "Install"
+msgstr "Instalar"
