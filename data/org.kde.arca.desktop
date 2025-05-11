@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Arca
+Name[ar]=أركا
 Name[ca]=Arca
 Name[ca@valencia]=Arca
 Name[de]=Arca
@@ -26,6 +27,7 @@ Name[x-test]=xxArcaxx
 Name[zh_CN]=Arca
 Name[zh_TW]=Arca
 Comment=Archive manager
+Comment[ar]=مدير الأرشيف
 Comment[ca]=Gestor d'arxius
 Comment[ca@valencia]=Gestor d'arxius
 Comment[de]=Archivverwaltung
@@ -56,6 +58,7 @@ Exec=arca %U
 Terminal=false
 Type=Application
 GenericName=Archiver
+GenericName[ar]=مؤرشف
 GenericName[ca]=Arxivador
 GenericName[ca@valencia]=Arxivador
 GenericName[de]=Archivprogramm
