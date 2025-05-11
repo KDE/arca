@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LGPL-3.0</project_license>
   <name>Arca</name>
+  <name xml:lang="ar">أركا</name>
   <name xml:lang="ca">Arca</name>
   <name xml:lang="ca-valencia">Arca</name>
   <name xml:lang="de">Arca</name>
@@ -30,6 +31,7 @@
   <name xml:lang="zh-CN">Arca</name>
   <name xml:lang="zh-TW">Arca</name>
   <summary>Archive manager</summary>
+  <summary xml:lang="ar">مدير الأرشيف</summary>
   <summary xml:lang="ca">Gestor d'arxius</summary>
   <summary xml:lang="ca-valencia">Gestor d'arxius</summary>
   <summary xml:lang="de">Archivverwaltung</summary>
@@ -57,6 +59,7 @@
   <summary xml:lang="zh-TW">封存檔管理器</summary>
   <description>
     <p>Browse, create and manage archives.</p>
+    <p xml:lang="ar">تصفح وإنشاء وإدارة الأرشيفات.</p>
     <p xml:lang="ca">Navegueu, creeu, i editeu arxius.</p>
     <p xml:lang="ca-valencia">Navegueu, creeu i editeu arxius.</p>
     <p xml:lang="de">Archive durchsuchen, erstellen und verwalten.</p>
@@ -89,6 +92,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Arca - mobile version</caption>
+      <caption xml:lang="ar">أركا - نسخة الجوال</caption>
       <caption xml:lang="ca">Arca - Versió mòbil</caption>
       <caption xml:lang="ca-valencia">Arca - Versió mòbil</caption>
       <caption xml:lang="de">Arca - mobile Version</caption>
