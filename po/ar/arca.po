@@ -62,7 +62,7 @@ msgstr "التّصاريح"
 #: src/controls/previewer/FileProperties.qml:148
 #, kde-format
 msgid "Set file permissions to access this file"
-msgstr "عيّن تصريحات الملف لتصل إلى هذا الملف"
+msgstr "عيّن أذون الملف لتصل إلى هذا الملف"
 
 #: src/controls/previewer/FileProperties.qml:49
 #: src/controls/previewer/FileProperties.qml:152
