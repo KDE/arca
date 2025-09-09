@@ -27,7 +27,6 @@
   <name xml:lang="sv">Arca</name>
   <name xml:lang="tr">Arca</name>
   <name xml:lang="uk">Арка</name>
-  <name xml:lang="x-test">xxArcaxx</name>
   <name xml:lang="zh-CN">Arca</name>
   <name xml:lang="zh-TW">Arca</name>
   <summary>Archive manager</summary>
@@ -54,7 +53,6 @@
   <summary xml:lang="sv">Arkiveringshanterare</summary>
   <summary xml:lang="tr">Arşiv Yöneticisi</summary>
   <summary xml:lang="uk">Менеджер архівів</summary>
-  <summary xml:lang="x-test">xxArchive managerxx</summary>
   <summary xml:lang="zh-CN">压缩文件管理工具</summary>
   <summary xml:lang="zh-TW">封存檔管理器</summary>
   <description>
@@ -82,7 +80,6 @@
     <p xml:lang="sv">Bläddra i, skapa och hantera arkiv.</p>
     <p xml:lang="tr">Arşivlere göz atın, arşiv oluşturun ve onları yönetin.</p>
     <p xml:lang="uk">Перегляд архівів, створення та керування ними</p>
-    <p xml:lang="x-test">xxBrowse, create and manage archives.xx</p>
     <p xml:lang="zh-CN">浏览，创建和管理压缩文件。</p>
     <p xml:lang="zh-TW">瀏覽、建立或管理封存檔。</p>
   </description>
@@ -115,7 +112,6 @@
       <caption xml:lang="sv">Arca - mobilversion</caption>
       <caption xml:lang="tr">Arca — Taşınabilir sürüm</caption>
       <caption xml:lang="uk">Арка — мобільна версія</caption>
-      <caption xml:lang="x-test">xxArca - mobile versionxx</caption>
       <caption xml:lang="zh-CN">Arca - 移动版本</caption>
       <caption xml:lang="zh-TW">Arcaa - 行動版</caption>
       <image type="source" width="2899" height="2326">
