@@ -1,0 +1,122 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the arca package.
+# SPDX-FileCopyrightText: 2025 Vit Pelcak <vpelcak@suse.cz>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arca\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-26 00:40+0000\n"
+"PO-Revision-Date: 2025-10-21 15:54+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 25.08.2\n"
+
+#: src/code/main.cpp:38
+#, kde-format
+msgid "Archive manager and explorer."
+msgstr "Správce a prohlížeč archivů."
+
+#: src/code/main.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr "Vývojář"
+
+#: src/controls/main.qml:64
+#, kde-format
+msgid "Compress"
+msgstr "Zkomprimovat"
+
+#: src/controls/main.qml:76
+#, kde-format
+msgid "Open archive"
+msgstr "Otevřít archiv"
+
+#: src/controls/main.qml:83
+#, kde-format
+msgid "Compress files"
+msgstr "Komprimovat soubory"
+
+#: src/controls/main.qml:122
+#, kde-format
+msgid "About"
+msgstr "O aplikaci"
+
+#: src/controls/previewer/CompressedPreview.qml:15
+#, kde-format
+msgid "Extract"
+msgstr "Rozbalit"
+
+#: src/controls/previewer/FileProperties.qml:44
+#, kde-format
+msgid "Permissions"
+msgstr "Oprávnění"
+
+#: src/controls/previewer/FileProperties.qml:45
+#: src/controls/previewer/FileProperties.qml:148
+#, kde-format
+msgid "Set file permissions to access this file"
+msgstr "Nastavte práva k přístupu k tomuto souboru"
+
+#: src/controls/previewer/FileProperties.qml:49
+#: src/controls/previewer/FileProperties.qml:152
+#, kde-format
+msgid "Owner"
+msgstr "Vlastník"
+
+#: src/controls/previewer/FileProperties.qml:58
+#: src/controls/previewer/FileProperties.qml:90
+#: src/controls/previewer/FileProperties.qml:122
+#, kde-format
+msgid "Read"
+msgstr "Čtení"
+
+#: src/controls/previewer/FileProperties.qml:65
+#: src/controls/previewer/FileProperties.qml:97
+#: src/controls/previewer/FileProperties.qml:128
+#, kde-format
+msgid "Write"
+msgstr "Zápis"
+
+#: src/controls/previewer/FileProperties.qml:72
+#: src/controls/previewer/FileProperties.qml:105
+#: src/controls/previewer/FileProperties.qml:134
+#, kde-format
+msgid "Execute"
+msgstr "Spustit"
+
+#: src/controls/previewer/FileProperties.qml:80
+#: src/controls/previewer/FileProperties.qml:159
+#, kde-format
+msgid "Group"
+msgstr "Skupina"
+
+#: src/controls/previewer/FileProperties.qml:113
+#, kde-format
+msgid "Everyone"
+msgstr "Všichni"
+
+#: src/controls/previewer/FileProperties.qml:147
+#, kde-format
+msgid "Ownership"
+msgstr "Vlastnictví"
+
+#: src/controls/previewer/FileProperties.qml:165
+#, kde-format
+msgid "Users"
+msgstr "Uživatelé"
+
+#: src/controls/previewer/FileProperties.qml:174
+#, kde-format
+msgid "Groups"
+msgstr "Skupiny"
+
+#: src/controls/previewer/FontPreviewer.qml:31
+#, kde-format
+msgid "Install"
+msgstr "Instalovat"
