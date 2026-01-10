@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: arca\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2024-12-26 00:40+0000\n"
+"PO-Revision-Date: 2026-01-09 23:20+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,107 +17,108 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/code/main.cpp:38
 #, kde-format
 msgid "Archive manager and explorer."
-msgstr ""
+msgstr "Archyvų tvarkytuvė ir naršyklė."
 
 #: src/code/main.cpp:43
 #, kde-format
 msgid "Developer"
-msgstr ""
+msgstr "Plėtotojas"
 
 #: src/controls/main.qml:64
 #, kde-format
 msgid "Compress"
-msgstr ""
+msgstr "Glaudinti"
 
 #: src/controls/main.qml:76
 #, kde-format
 msgid "Open archive"
-msgstr ""
+msgstr "Atverti archyvą"
 
 #: src/controls/main.qml:83
 #, kde-format
 msgid "Compress files"
-msgstr ""
+msgstr "Glaudinti failus"
 
 #: src/controls/main.qml:122
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Apie"
 
 #: src/controls/previewer/CompressedPreview.qml:15
 #, kde-format
 msgid "Extract"
-msgstr ""
+msgstr "Išpakuoti"
 
 #: src/controls/previewer/FileProperties.qml:44
 #, kde-format
 msgid "Permissions"
-msgstr ""
+msgstr "Leidimai"
 
 #: src/controls/previewer/FileProperties.qml:45
 #: src/controls/previewer/FileProperties.qml:148
 #, kde-format
 msgid "Set file permissions to access this file"
-msgstr ""
+msgstr "Nustatyti failo leidimus, kad gautumėte prieiga prie šio failo"
 
 #: src/controls/previewer/FileProperties.qml:49
 #: src/controls/previewer/FileProperties.qml:152
 #, kde-format
 msgid "Owner"
-msgstr ""
+msgstr "Savininkas"
 
 #: src/controls/previewer/FileProperties.qml:58
 #: src/controls/previewer/FileProperties.qml:90
 #: src/controls/previewer/FileProperties.qml:122
 #, kde-format
 msgid "Read"
-msgstr ""
+msgstr "Skaityti"
 
 #: src/controls/previewer/FileProperties.qml:65
 #: src/controls/previewer/FileProperties.qml:97
 #: src/controls/previewer/FileProperties.qml:128
 #, kde-format
 msgid "Write"
-msgstr ""
+msgstr "Rašyti"
 
 #: src/controls/previewer/FileProperties.qml:72
 #: src/controls/previewer/FileProperties.qml:105
 #: src/controls/previewer/FileProperties.qml:134
 #, kde-format
 msgid "Execute"
-msgstr ""
+msgstr "Vykdyti"
 
 #: src/controls/previewer/FileProperties.qml:80
 #: src/controls/previewer/FileProperties.qml:159
 #, kde-format
 msgid "Group"
-msgstr ""
+msgstr "Grupė"
 
 #: src/controls/previewer/FileProperties.qml:113
 #, kde-format
 msgid "Everyone"
-msgstr ""
+msgstr "Visi"
 
 #: src/controls/previewer/FileProperties.qml:147
 #, kde-format
 msgid "Ownership"
-msgstr ""
+msgstr "Nuosavybė"
 
 #: src/controls/previewer/FileProperties.qml:165
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Naudotojai"
 
 #: src/controls/previewer/FileProperties.qml:174
 #, kde-format
 msgid "Groups"
-msgstr ""
+msgstr "Grupės"
 
 #: src/controls/previewer/FontPreviewer.qml:31
 #, kde-format
 msgid "Install"
-msgstr ""
+msgstr "Įdiegti"
