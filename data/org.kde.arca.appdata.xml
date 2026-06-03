@@ -60,6 +60,7 @@
   <summary xml:lang="sl">Upravljalnik arhiva</summary>
   <summary xml:lang="sv">Arkiveringshanterare</summary>
   <summary xml:lang="tr">Arşiv Yöneticisi</summary>
+  <summary xml:lang="ug">ئارخىپ باشقۇرغۇچ</summary>
   <summary xml:lang="uk">Менеджер архівів</summary>
   <summary xml:lang="zh-CN">压缩文件管理工具</summary>
   <summary xml:lang="zh-TW">封存檔管理器</summary>
@@ -127,6 +128,7 @@
       <caption xml:lang="sl">Arca - mobilna različica</caption>
       <caption xml:lang="sv">Arca - mobilversion</caption>
       <caption xml:lang="tr">Arca — Taşınabilir sürüm</caption>
+      <caption xml:lang="ug">Arca - كۆچمە نەشرى</caption>
       <caption xml:lang="uk">Арка — мобільна версія</caption>
       <caption xml:lang="zh-CN">Arca - 移动版本</caption>
       <caption xml:lang="zh-TW">Arcaa - 行動版</caption>
