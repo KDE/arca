@@ -1,5 +1,5 @@
-# SPDX-FileCopyrightText: 2025 Tobias Blecher <onewayme001@posteo.de>
 # SPDX-FileCopyrightText: 2025 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2025 Tobias Blecher <onewayme001@posteo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: arca\n"
