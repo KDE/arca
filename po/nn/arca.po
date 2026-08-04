@@ -1,0 +1,125 @@
+# Translation of arca to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: arca\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"PO-Revision-Date: 2026-08-03 19:49+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.11.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: src/code/main.cpp:38
+#, kde-format
+msgid "Archive manager and explorer."
+msgstr "Arkivhandsamar og -utforskar."
+
+#: src/code/main.cpp:43
+#, kde-format
+msgid "Developer"
+msgstr "Utviklar"
+
+#: src/controls/main.qml:64
+#, kde-format
+msgid "Compress"
+msgstr "Komprimer"
+
+#: src/controls/main.qml:76
+#, kde-format
+msgid "Open archive"
+msgstr "Opna arkiv"
+
+#: src/controls/main.qml:83
+#, kde-format
+msgid "Compress files"
+msgstr "Komprimer filer"
+
+#: src/controls/main.qml:122
+#, kde-format
+msgid "About"
+msgstr "Om"
+
+#: src/controls/previewer/CompressedPreview.qml:15
+#, kde-format
+msgid "Extract"
+msgstr "Pakk ut"
+
+#: src/controls/previewer/FileProperties.qml:44
+#, kde-format
+msgid "Permissions"
+msgstr "Løyve"
+
+#: src/controls/previewer/FileProperties.qml:45
+#: src/controls/previewer/FileProperties.qml:148
+#, kde-format
+msgid "Set file permissions to access this file"
+msgstr "Registrer fillyøve for fila"
+
+#: src/controls/previewer/FileProperties.qml:49
+#: src/controls/previewer/FileProperties.qml:152
+#, kde-format
+msgid "Owner"
+msgstr "Eigar"
+
+#: src/controls/previewer/FileProperties.qml:58
+#: src/controls/previewer/FileProperties.qml:90
+#: src/controls/previewer/FileProperties.qml:122
+#, kde-format
+msgid "Read"
+msgstr "Lesing"
+
+#: src/controls/previewer/FileProperties.qml:65
+#: src/controls/previewer/FileProperties.qml:97
+#: src/controls/previewer/FileProperties.qml:128
+#, kde-format
+msgid "Write"
+msgstr "Skriving"
+
+#: src/controls/previewer/FileProperties.qml:72
+#: src/controls/previewer/FileProperties.qml:105
+#: src/controls/previewer/FileProperties.qml:134
+#, kde-format
+msgid "Execute"
+msgstr "Køyring"
+
+#: src/controls/previewer/FileProperties.qml:80
+#: src/controls/previewer/FileProperties.qml:159
+#, kde-format
+msgid "Group"
+msgstr "Gruppe"
+
+#: src/controls/previewer/FileProperties.qml:113
+#, kde-format
+msgid "Everyone"
+msgstr "Alle"
+
+#: src/controls/previewer/FileProperties.qml:147
+#, kde-format
+msgid "Ownership"
+msgstr "Eigarskap"
+
+#: src/controls/previewer/FileProperties.qml:165
+#, kde-format
+msgid "Users"
+msgstr "Brukarar"
+
+#: src/controls/previewer/FileProperties.qml:174
+#, kde-format
+msgid "Groups"
+msgstr "Grupper"
+
+#: src/controls/previewer/FontPreviewer.qml:31
+#, kde-format
+msgid "Install"
+msgstr "Installer"
