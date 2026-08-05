@@ -23,6 +23,7 @@
   <name xml:lang="lt">Arca</name>
   <name xml:lang="lv">Arca</name>
   <name xml:lang="nl">Arca</name>
+  <name xml:lang="nn">Arca</name>
   <name xml:lang="pl">Arca</name>
   <name xml:lang="pt-BR">Arca</name>
   <name xml:lang="sa">आर्का</name>
@@ -53,6 +54,7 @@
   <summary xml:lang="lt">Archyvų tvarkytuvė</summary>
   <summary xml:lang="lv">Arhīvu pārvaldnieks</summary>
   <summary xml:lang="nl">Archiefbeheerder</summary>
+  <summary xml:lang="nn">Arkivhandsamar</summary>
   <summary xml:lang="pl">Zarządzanie archiwami</summary>
   <summary xml:lang="pt-BR">Gerenciador de arquivos compactados</summary>
   <summary xml:lang="sa">अभिलेखागार प्रबन्धक</summary>
@@ -85,6 +87,7 @@
     <p xml:lang="lt">Naršyti, kurti ir tvarkyti archyvus.</p>
     <p xml:lang="lv">Pārlūkojiet, izveidojiet un pārvaldiet arhīvus.</p>
     <p xml:lang="nl">Door archieven bladeren, ze aanmaken en beheren.</p>
+    <p xml:lang="nn">Bla gjennom, lag og handsam arkivfiler.</p>
     <p xml:lang="pl">Przeglądaj, twórz i zarządzaj archiwami.</p>
     <p xml:lang="pt-BR">Navegue, crie e gerencie arquivos compactados.</p>
     <p xml:lang="sa">अभिलेखागारं ब्राउज् कुर्वन्तु, रचयन्तु, प्रबन्धयन्तु च ।</p>
@@ -121,6 +124,7 @@
       <caption xml:lang="lt">Arca – mobilioji versija</caption>
       <caption xml:lang="lv">„Arca“ — mobilā versija</caption>
       <caption xml:lang="nl">Arca - mobiele versie</caption>
+      <caption xml:lang="nn">Arca – mobil versjon</caption>
       <caption xml:lang="pl">Arca - wersja przenośna</caption>
       <caption xml:lang="pt-BR">Arca - versão mobile</caption>
       <caption xml:lang="sa">आर्का - मोबाइल संस्करण</caption>
