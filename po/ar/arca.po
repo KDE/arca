@@ -36,7 +36,7 @@ msgstr "اضغط"
 #: src/controls/main.qml:76
 #, kde-format
 msgid "Open archive"
-msgstr "افتح أرشيفاً"
+msgstr "افتح أرشيفًا"
 
 #: src/controls/main.qml:83
 #, kde-format
