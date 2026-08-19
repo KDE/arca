@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the arca package.
 # Oscar Hauge Nielsen <oscarhauge@protonmail.com>, 2026.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: arca\n"
@@ -12,11 +11,12 @@ msgstr ""
 "PO-Revision-Date: 2026-08-18 09:41+0200\n"
 "Last-Translator: Oscar Hauge Nielsen <oscharhauge@protonmail.com>\n"
 "Language-Team: Danish <kde-i18n-da@kde.org>\n"
-"Language: da_DK\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: src/code/main.cpp:38
 #, kde-format
